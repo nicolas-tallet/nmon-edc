@@ -1,0 +1,180 @@
+#!/bin/bash
+
+#===============================================================================
+# Script: nmon-edc
+#
+# Version: 21.02.1
+#
+# Developer: IBM Client Center Montpellier
+#===============================================================================
+
+#===============================================================================
+# Environment
+#===============================================================================
+readonly NEDC_PREFIX="$(realpath "$(dirname ${BASH_SOURCE[0]})"/..)"
+readonly NEDC_CONFIGDIR="${NEDC_PREFIX}/etc"
+readonly NEDC_LIBEXECDIR="${NEDC_PREFIX}/libexec"
+readonly NEDC_LOGDIR="${NEDC_PREFIX}/var/log"
+readonly NEDC_LOGFILE="${NEDC_LOGDIR}/nmon-edc.log"
+readonly NEDC_RUNDIR="${NEDC_PREFIX}/var/run"
+
+#===============================================================================
+# Function: Help
+#===============================================================================
+help() {
+	cat <<- eof >&1
+
+nmon EDC (External Data Collector) 21.02.1
+
+Usage: $(basename ${BASH_SOURCE[0]}) -action {start|stop} -data-collector COLLECTOR [-log-level LEVEL]
+
+Options:
+  -action ACTION               Start / Stop Data Collection = {start | stop}
+  -data-collector COLLECTOR    Data Collector Name
+  -log-level LEVEL             Log Level = {ALL | TRACE | DEBUG | INFO | WARN | ERROR | OFF}
+  -outputfile-nedc FILE        Output File for nmon EDC Data
+  -outputfile-nmon FILE        Output File for nmon Base Data
+
+Available Data Collectors:
+  powerusage     Power Usage Data Collection
+
+eof
+	exit 0
+}
+
+# nmon EDC Modules
+while IFS= read -d '' -r modulefile; do
+	module="$(awk 'match($0, /(nedc::.*)\(\)/, a) {print a[1]}' ${modulefile})"
+	module="${module//./::}"
+	if [[ -n "${module}" ]] && [[ "$(type -t "${module}" 2>/dev/null)" != "function" ]]; then
+		# shellcheck source=/dev/null
+		source "${modulefile}"
+		if (( ${?} != 0 )); then
+			nedc::utils::logger::event-log -level "${LOGGER_LEVEL_WARN}" -message "Loading Modulefile Failed: [${modulefile}] - Skipping Module"
+		fi
+	fi
+done < <(find ${NEDC_LIBEXECDIR}/nedc/utils/logger/ ${NEDC_LIBEXECDIR}/ -name "*.sh" -print0)
+
+# Options
+while (( $# > 0 )); do
+	case "${1}" in
+		-action)
+			action="${2,,}"
+			shift
+			;;
+		-help|-h)
+			help
+			;;
+		-data-collector)
+			data_collector="${2}"
+			shift
+			;;
+		-log-level)
+			LOG_LEVEL="${2}"
+			shift
+			;;
+		-outputfile-nedc)
+			outputfile_nedc="${2}"
+			shift
+			;;
+		-outputfile-nmon)
+			outputfile_nmon="${2}"
+			shift
+			;;
+		*)
+			nedc::utils::logger::exception-raise -message "Invalid Option: [${1}]"
+			;;
+	esac
+	shift
+done
+
+# Log Level
+if [[ -n "${JOB_LOG_LEVEL}" ]]; then
+	LOG_LEVEL="${JOB_LOG_LEVEL}"
+fi
+LOG_LEVEL="${LOG_LEVEL:-INFO}"
+if [[ "${LOG_LEVEL}" != "ALL" && "${LOG_LEVEL}" != "TRACE" && "${LOG_LEVEL}" != "DEBUG" \
+		&& "${LOG_LEVEL}" != "INFO" && "${LOG_LEVEL}" != "WARN" && "${LOG_LEVEL}" != "ERROR" && "${LOG_LEVEL}" != "OFF" ]]; then
+	nedc::utils::logger::exception-raise -message "Invalid Log Level: [${LOG_LEVEL}]"
+fi
+LOG_LEVEL="LOGGER_LEVEL_${LOG_LEVEL}"
+LOG_LEVEL="${!LOG_LEVEL}"
+
+# Startup Message
+nedc::utils::logger::event-log -level "${LOGGER_LEVEL_TRACE}" -message "Starting nmon External Data Collector"
+
+# Log Level
+nedc::utils::logger::event-log -level "${LOGGER_LEVEL_DEBUG}" -message "Performing Execution with Log Level: [${LOGGER_LEVELS[${LOG_LEVEL}]}]"
+
+# Action
+if [[ -z "${action}" ]]; then
+	nedc::utils::logger::exception-raise -message "Missing Argument: [Action]"
+fi
+if [[ "${action}" != "start" ]] && [[ "${action}" != "stop" ]]; then
+	nedc::utils::logger::exception-raise -message "Invalid Action: [${action}]"
+fi
+
+# Data Collector
+if [[ -z "${data_collector}" ]]; then
+	nedc::utils::logger::exception-raise -message "Missing Argument: [Data Collector]"
+fi
+if [[ ! -d "${NEDC_LIBEXECDIR}/nedc/${data_collector}" ]]; then
+	nedc::utils::logger::exception-raise -message "Invalid Data Collector: [${data_collector}]"
+fi
+
+# Output File nmon EDC
+if [[ -z "${outputfile_nedc}" ]]; then
+	nedc::utils::logger::exception-raise -message "Missing Argument: [Output File for nmon EDC]"
+fi
+if [[ ! -d "$(dirname "${outputfile_nedc}")" ]]; then
+	nedc::utils::logger::exception-raise -message "Invalid Directory: [$(dirname "${outputfile_nedc}")]"
+fi
+
+# Output File nmon
+if [[ -z "${outputfile_nmon}" ]]; then
+	nedc::utils::logger::exception-raise -message "Missing Argument: [Output File for nmon]"
+fi
+if [[ ! -d "$(dirname "${outputfile_nmon}")" ]]; then
+	nedc::utils::logger::exception-raise -message "Invalid Directory: [$(dirname "${outputfile_nmon}")]"
+fi
+
+case "${action}" in
+	start)
+		export NMON_END="${NEDC_LIBEXECDIR}/nedc/${data_collector}/nmon-end.sh"
+		export NMON_ONE_IN=1
+		export NMON_OUTPUTFILE_NEDC="${outputfile_nedc}"
+		export NMON_OUTPUTFILE_NMON="${outputfile_nmon}"
+		export NMON_SNAP="${NEDC_LIBEXECDIR}/nedc/${data_collector}/nmon-snap.sh"
+		export NMON_START="${NEDC_LIBEXECDIR}/nedc/${data_collector}/nmon-start.sh"
+		export TIMESTAMP=0
+		if [[ -f "${outputfile_nmon}" ]]; then
+			nedc::utils::logger::event-log -level "${LOGGER_LEVEL_WARN}" -message "Removing Existing nmon Output File"
+			rm --force --verbose ${outputfile_nmon}
+		fi
+		touch "${outputfile_nmon}" || nedc::utils::logger::exception-raise -message "Failed Initializing nmon Output File: [${outputfile_nmon}]"
+		if [[ -f "${outputfile_nedc}" ]]; then
+			nedc::utils::logger::event-log -level "${LOGGER_LEVEL_WARN}" -message "Removing Existing nmon EDC Output File"
+			rm --force --verbose ${outputfile_nedc}
+		fi
+		touch "${outputfile_nedc}" || nedc::utils::logger::exception-raise -message "Failed Initializing EDC  Output File: [${outputfile_nedc}]"
+		nedc::apis::nmon::collection-start -directory "$(dirname "${outputfile_nmon}")" -filename "$(basename "${outputfile_nmon}")"
+		if (( ${?} == 0 )); then
+			nedc::utils::logger::event-log -level "${LOGGER_LEVEL_INFO}" -message "Started nmon Data Collection"
+		else
+			nedc::utils::logger::exception-raise -message "Failed Starting nmon Data Collection"
+		fi
+		;;
+	stop)
+		nedc::apis::nmon::collection-stop
+		if (( ${?} == 0 )); then
+			nedc::utils::logger::event-log -level "${LOGGER_LEVEL_INFO}" -message "Stopped nmon Data Collection"
+		else
+			nedc::utils::logger::event-log -level "${LOGGER_LEVEL_ERROR}" -message "Failed Stopping nmon Data Collection"
+		fi
+		;;
+esac
+
+# Exit Message
+nedc::utils::logger::event-log -level "${LOGGER_LEVEL_TRACE}" -message "Stopping nmon External Data Collector"
+
+exit 0
