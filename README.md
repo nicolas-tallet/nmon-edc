@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Modular 
+Modular framework for nmon External Data Collector (EDC) feature
 
 ## Features
 
-* Provides a modular architecture for leveraging External Data Collectors
+* Provides a modular architecture for leveraging nmon External Data Collectors
 * Provides a Power Usage Data collector for IBM OpenPOWER systems
 
 ## Usage
