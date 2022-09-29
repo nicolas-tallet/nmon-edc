@@ -1,0 +1,693 @@
+{
+   "ibmpowernv-isa-0000":{
+      "Adapter": "ISA adapter",
+      "Chip 0 Vdd Remote Sense":{
+         "in1_input": 0.903,
+         "in1_lowest": 0.677,
+         "in1_highest": 1.017
+      },
+      "Chip 0 Vdn Remote Sense":{
+         "in2_input": 0.901,
+         "in2_lowest": 0.901,
+         "in2_highest": 0.901
+      },
+      "Chip 8 Vdd Remote Sense":{
+         "in3_input": 0.895,
+         "in3_lowest": 0.737,
+         "in3_highest": 1.022
+      },
+      "Chip 8 Vdn Remote Sense":{
+         "in4_input": 0.901,
+         "in4_lowest": 0.901,
+         "in4_highest": 0.902
+      },
+      "Chip 0 Vdd":{
+         "in5_input": 0.909,
+         "in5_lowest": 0.700,
+         "in5_highest": 1.021
+      },
+      "Chip 0 Vdn":{
+         "in6_input": 0.903,
+         "in6_lowest": 0.903,
+         "in6_highest": 0.903
+      },
+      "Chip 8 Vdd":{
+         "in7_input": 0.901,
+         "in7_lowest": 0.762,
+         "in7_highest": 1.026
+      },
+      "Chip 8 Vdn":{
+         "in8_input": 0.903,
+         "in8_lowest": 0.903,
+         "in8_highest": 0.903
+      },
+      "Chip 0 Core 0":{
+         "temp1_input": 27.000,
+         "temp1_lowest": 25.000,
+         "temp1_highest": 40.000
+      },
+      "Chip 0 Core 4":{
+         "temp2_input": 28.000,
+         "temp2_lowest": 24.000,
+         "temp2_highest": 39.000
+      },
+      "Chip 0 Core 8":{
+         "temp3_input": 28.000,
+         "temp3_lowest": 24.000,
+         "temp3_highest": 38.000
+      },
+      "Chip 0 Core 12":{
+         "temp4_input": 28.000,
+         "temp4_lowest": 25.000,
+         "temp4_highest": 40.000
+      },
+      "Chip 0 Core 16":{
+         "temp5_input": 28.000,
+         "temp5_lowest": 25.000,
+         "temp5_highest": 41.000
+      },
+      "Chip 0 Core 20":{
+         "temp6_input": 28.000,
+         "temp6_lowest": 23.000,
+         "temp6_highest": 41.000
+      },
+      "Chip 0 Core 24":{
+         "temp7_input": 28.000,
+         "temp7_lowest": 24.000,
+         "temp7_highest": 41.000
+      },
+      "Chip 0 Core 28":{
+         "temp8_input": 28.000,
+         "temp8_lowest": 24.000,
+         "temp8_highest": 39.000
+      },
+      "Chip 0 Core 32":{
+         "temp9_input": 28.000,
+         "temp9_lowest": 23.000,
+         "temp9_highest": 40.000
+      },
+      "Chip 0 Core 36":{
+         "temp10_input": 27.000,
+         "temp10_lowest": 23.000,
+         "temp10_highest": 38.000
+      },
+      "Chip 0 Core 40":{
+         "temp11_input": 28.000,
+         "temp11_lowest": 24.000,
+         "temp11_highest": 40.000
+      },
+      "Chip 0 Core 44":{
+         "temp12_input": 28.000,
+         "temp12_lowest": 24.000,
+         "temp12_highest": 42.000
+      },
+      "Chip 0 Core 48":{
+         "temp13_input": 28.000,
+         "temp13_lowest": 24.000,
+         "temp13_highest": 43.000
+      },
+      "Chip 0 Core 52":{
+         "temp14_input": 28.000,
+         "temp14_lowest": 24.000,
+         "temp14_highest": 41.000
+      },
+      "Chip 0 Core 56":{
+         "temp15_input": 28.000,
+         "temp15_lowest": 25.000,
+         "temp15_highest": 43.000
+      },
+      "Chip 0 Core 60":{
+         "temp16_input": 28.000,
+         "temp16_lowest": 25.000,
+         "temp16_highest": 41.000
+      },
+      "Chip 0 Core 64":{
+         "temp17_input": 28.000,
+         "temp17_lowest": 25.000,
+         "temp17_highest": 42.000
+      },
+      "Chip 0 Core 68":{
+         "temp18_input": 28.000,
+         "temp18_lowest": 25.000,
+         "temp18_highest": 42.000
+      },
+      "Chip 8 Core 72":{
+         "temp19_input": 28.000,
+         "temp19_lowest": 23.000,
+         "temp19_highest": 40.000
+      },
+      "Chip 8 Core 76":{
+         "temp20_input": 28.000,
+         "temp20_lowest": 23.000,
+         "temp20_highest": 40.000
+      },
+      "Chip 8 Core 80":{
+         "temp21_input": 28.000,
+         "temp21_lowest": 25.000,
+         "temp21_highest": 40.000
+      },
+      "Chip 8 Core 84":{
+         "temp22_input": 28.000,
+         "temp22_lowest": 25.000,
+         "temp22_highest": 40.000
+      },
+      "Chip 8 Core 88":{
+         "temp23_input": 28.000,
+         "temp23_lowest": 24.000,
+         "temp23_highest": 41.000
+      },
+      "Chip 8 Core 92":{
+         "temp24_input": 28.000,
+         "temp24_lowest": 24.000,
+         "temp24_highest": 39.000
+      },
+      "Chip 8 Core 96":{
+         "temp25_input": 28.000,
+         "temp25_lowest": 23.000,
+         "temp25_highest": 40.000
+      },
+      "Chip 8 Core 100":{
+         "temp26_input": 28.000,
+         "temp26_lowest": 23.000,
+         "temp26_highest": 41.000
+      },
+      "Chip 8 Core 104":{
+         "temp27_input": 28.000,
+         "temp27_lowest": 23.000,
+         "temp27_highest": 40.000
+      },
+      "Chip 8 Core 108":{
+         "temp28_input": 28.000,
+         "temp28_lowest": 22.000,
+         "temp28_highest": 38.000
+      },
+      "Chip 8 Core 112":{
+         "temp29_input": 28.000,
+         "temp29_lowest": 21.000,
+         "temp29_highest": 38.000
+      },
+      "Chip 8 Core 116":{
+         "temp30_input": 28.000,
+         "temp30_lowest": 24.000,
+         "temp30_highest": 41.000
+      },
+      "Chip 8 Core 120":{
+         "temp31_input": 28.000,
+         "temp31_lowest": 25.000,
+         "temp31_highest": 41.000
+      },
+      "Chip 8 Core 124":{
+         "temp32_input": 28.000,
+         "temp32_lowest": 25.000,
+         "temp32_highest": 42.000
+      },
+      "Chip 8 Core 128":{
+         "temp33_input": 28.000,
+         "temp33_lowest": 25.000,
+         "temp33_highest": 42.000
+      },
+      "Chip 8 Core 132":{
+         "temp34_input": 28.000,
+         "temp34_lowest": 24.000,
+         "temp34_highest": 39.000
+      },
+      "Chip 8 Core 136":{
+         "temp35_input": 28.000,
+         "temp35_lowest": 22.000,
+         "temp35_highest": 39.000
+      },
+      "Chip 8 Core 140":{
+         "temp36_input": 28.000,
+         "temp36_lowest": 22.000,
+         "temp36_highest": 40.000
+      },
+      "Chip 0 GPU 0 ":{
+         "temp37_input": 31.000,
+         "temp37_lowest": 30.000,
+         "temp37_highest": 53.000
+      },
+      "Chip 0 GPU 1 ":{
+         "temp38_input": 31.000,
+         "temp38_lowest": 29.000,
+         "temp38_highest": 53.000
+      },
+      "Chip 0 GPU 2 ":{
+         "temp39_input": 32.000,
+         "temp39_lowest": 28.000,
+         "temp39_highest": 57.000
+      },
+      "Chip 0 GPU 0 MEM":{
+         "temp40_input": 29.000,
+         "temp40_lowest": 28.000,
+         "temp40_highest": 54.000
+      },
+      "Chip 0 GPU 1 MEM":{
+         "temp41_input": 31.000,
+         "temp41_lowest": 29.000,
+         "temp41_highest": 57.000
+      },
+      "Chip 0 GPU 2 MEM":{
+         "temp42_input": 29.000,
+         "temp42_lowest": 27.000,
+         "temp42_highest": 60.000
+      },
+      "Chip 8 GPU 0 ":{
+         "temp43_input": 30.000,
+         "temp43_lowest": 29.000,
+         "temp43_highest": 53.000
+      },
+      "Chip 8 GPU 1 ":{
+         "temp44_input": 31.000,
+         "temp44_lowest": 26.000,
+         "temp44_highest": 53.000
+      },
+      "Chip 8 GPU 2 ":{
+         "temp45_input": 32.000,
+         "temp45_lowest": 26.000,
+         "temp45_highest": 57.000
+      },
+      "Chip 8 GPU 0 MEM":{
+         "temp46_input": 28.000,
+         "temp46_lowest": 27.000,
+         "temp46_highest": 53.000
+      },
+      "Chip 8 GPU 1 MEM":{
+         "temp47_input": 29.000,
+         "temp47_lowest": 28.000,
+         "temp47_highest": 56.000
+      },
+      "Chip 8 GPU 2 MEM":{
+         "temp48_input": 30.000,
+         "temp48_lowest": 29.000,
+         "temp48_highest": 60.000
+      },
+      "Chip 0 DIMM 0 ":{
+         "temp49_input": 0.000,
+         "temp49_lowest": 0.000,
+         "temp49_highest": 0.000
+      },
+      "Chip 0 DIMM 1 ":{
+         "temp50_input": 0.000,
+         "temp50_lowest": 0.000,
+         "temp50_highest": 0.000
+      },
+      "Chip 0 DIMM 2 ":{
+         "temp51_input": 32.000,
+         "temp51_lowest": 27.000,
+         "temp51_highest": 39.000
+      },
+      "Chip 0 DIMM 3 ":{
+         "temp52_input": 32.000,
+         "temp52_lowest": 27.000,
+         "temp52_highest": 40.000
+      },
+      "Chip 0 DIMM 4 ":{
+         "temp53_input": 33.000,
+         "temp53_lowest": 27.000,
+         "temp53_highest": 40.000
+      },
+      "Chip 0 DIMM 5 ":{
+         "temp54_input": 33.000,
+         "temp54_lowest": 28.000,
+         "temp54_highest": 40.000
+      },
+      "Chip 0 DIMM 6 ":{
+         "temp55_input": 0.000,
+         "temp55_lowest": 0.000,
+         "temp55_highest": 0.000
+      },
+      "Chip 0 DIMM 7 ":{
+         "temp56_input": 0.000,
+         "temp56_lowest": 0.000,
+         "temp56_highest": 0.000
+      },
+      "Chip 0 DIMM 8 ":{
+         "temp57_input": 0.000,
+         "temp57_lowest": 0.000,
+         "temp57_highest": 0.000
+      },
+      "Chip 0 DIMM 9 ":{
+         "temp58_input": 0.000,
+         "temp58_lowest": 0.000,
+         "temp58_highest": 0.000
+      },
+      "Chip 0 DIMM 10 ":{
+         "temp59_input": 33.000,
+         "temp59_lowest": 28.000,
+         "temp59_highest": 40.000
+      },
+      "Chip 0 DIMM 11 ":{
+         "temp60_input": 33.000,
+         "temp60_lowest": 28.000,
+         "temp60_highest": 40.000
+      },
+      "Chip 0 DIMM 12 ":{
+         "temp61_input": 32.000,
+         "temp61_lowest": 27.000,
+         "temp61_highest": 38.000
+      },
+      "Chip 0 DIMM 13 ":{
+         "temp62_input": 33.000,
+         "temp62_lowest": 28.000,
+         "temp62_highest": 40.000
+      },
+      "Chip 0 DIMM 14 ":{
+         "temp63_input": 0.000,
+         "temp63_lowest": 0.000,
+         "temp63_highest": 0.000
+      },
+      "Chip 0 DIMM 15 ":{
+         "temp64_input": 0.000,
+         "temp64_lowest": 0.000,
+         "temp64_highest": 0.000
+      },
+      "Chip 8 DIMM 0 ":{
+         "temp65_input": 0.000,
+         "temp65_lowest": 0.000,
+         "temp65_highest": 0.000
+      },
+      "Chip 8 DIMM 1 ":{
+         "temp66_input": 0.000,
+         "temp66_lowest": 0.000,
+         "temp66_highest": 0.000
+      },
+      "Chip 8 DIMM 2 ":{
+         "temp67_input": 31.000,
+         "temp67_lowest": 27.000,
+         "temp67_highest": 33.000
+      },
+      "Chip 8 DIMM 3 ":{
+         "temp68_input": 33.000,
+         "temp68_lowest": 28.000,
+         "temp68_highest": 34.000
+      },
+      "Chip 8 DIMM 4 ":{
+         "temp69_input": 32.000,
+         "temp69_lowest": 28.000,
+         "temp69_highest": 34.000
+      },
+      "Chip 8 DIMM 5 ":{
+         "temp70_input": 33.000,
+         "temp70_lowest": 28.000,
+         "temp70_highest": 34.000
+      },
+      "Chip 8 DIMM 6 ":{
+         "temp71_input": 0.000,
+         "temp71_lowest": 0.000,
+         "temp71_highest": 0.000
+      },
+      "Chip 8 DIMM 7 ":{
+         "temp72_input": 0.000,
+         "temp72_lowest": 0.000,
+         "temp72_highest": 0.000
+      },
+      "Chip 8 DIMM 8 ":{
+         "temp73_input": 0.000,
+         "temp73_lowest": 0.000,
+         "temp73_highest": 0.000
+      },
+      "Chip 8 DIMM 9 ":{
+         "temp74_input": 0.000,
+         "temp74_lowest": 0.000,
+         "temp74_highest": 0.000
+      },
+      "Chip 8 DIMM 10 ":{
+         "temp75_input": 32.000,
+         "temp75_lowest": 27.000,
+         "temp75_highest": 34.000
+      },
+      "Chip 8 DIMM 11 ":{
+         "temp76_input": 35.000,
+         "temp76_lowest": 29.000,
+         "temp76_highest": 37.000
+      },
+      "Chip 8 DIMM 12 ":{
+         "temp77_input": 31.000,
+         "temp77_lowest": 26.000,
+         "temp77_highest": 33.000
+      },
+      "Chip 8 DIMM 13 ":{
+         "temp78_input": 33.000,
+         "temp78_lowest": 28.000,
+         "temp78_highest": 35.000
+      },
+      "Chip 8 DIMM 14 ":{
+         "temp79_input": 0.000,
+         "temp79_lowest": 0.000,
+         "temp79_highest": 0.000
+      },
+      "Chip 8 DIMM 15 ":{
+         "temp80_input": 0.000,
+         "temp80_lowest": 0.000,
+         "temp80_highest": 0.000
+      },
+      "Chip 0 Nest":{
+         "temp81_input": 28.000,
+         "temp81_lowest": 25.000,
+         "temp81_highest": 34.000
+      },
+      "Chip 8 Nest":{
+         "temp82_input": 28.000,
+         "temp82_lowest": 27.000,
+         "temp82_highest": 34.000
+      },
+      "Chip 0 VRM VDD":{
+         "temp83_input": 34.000,
+         "temp83_lowest": 30.000,
+         "temp83_highest": 46.000
+      },
+      "Chip 8 VRM VDD":{
+         "temp84_input": 34.000,
+         "temp84_lowest": 29.000,
+         "temp84_highest": 45.000
+      },
+      "Chip 0 GPU":{
+         "power1_input": 114.000,
+         "power1_input_highest": 1092.000,
+         "power1_input_lowest": 0.000
+      },
+      "Chip 8 GPU":{
+         "power2_input": 113.000,
+         "power2_input_highest": 1088.000,
+         "power2_input_lowest": 0.000
+      },
+      "Chip 0 Memory":{
+         "power3_input": 23.000,
+         "power3_input_highest": 65.000,
+         "power3_input_lowest": 0.000
+      },
+      "Chip 8 Memory":{
+         "power4_input": 22.000,
+         "power4_input_highest": 56.000,
+         "power4_input_lowest": 0.000
+      },
+      "Chip 0 ":{
+         "power5_input": 82.000,
+         "power5_input_highest": 308.000,
+         "power5_input_lowest": 0.000
+      },
+      "Chip 0 Vdd":{
+         "power6_input": 20.000,
+         "power6_input_highest": 208.000,
+         "power6_input_lowest": 6.000
+      },
+      "Chip 0 Vdn":{
+         "power7_input": 23.000,
+         "power7_input_highest": 36.000,
+         "power7_input_lowest": 20.000
+      },
+      "Chip 8 ":{
+         "power8_input": 77.000,
+         "power8_input_highest": 311.000,
+         "power8_input_lowest": 0.000
+      },
+      "Chip 8 Vdd":{
+         "power9_input": 19.000,
+         "power9_input_highest": 220.000,
+         "power9_input_lowest": 5.000
+      },
+      "Chip 8 Vdn":{
+         "power10_input": 22.000,
+         "power10_input_highest": 33.000,
+         "power10_input_lowest": 19.000
+      },
+      "System":{
+         "power11_input": 425.000,
+         "power11_input_highest": 1975.000,
+         "power11_input_lowest": 0.000
+      },
+      "APSS 0 ":{
+         "power12_input": 425.000,
+         "power12_input_highest": 1975.000,
+         "power12_input_lowest": 0.000
+      },
+      "APSS 2 ":{
+         "power13_input": 25.000,
+         "power13_input_highest": 247.000,
+         "power13_input_lowest": 0.000
+      },
+      "APSS 3 ":{
+         "power14_input": 23.000,
+         "power14_input_highest": 262.000,
+         "power14_input_lowest": 0.000
+      },
+      "APSS 4 ":{
+         "power15_input": 56.000,
+         "power15_input_highest": 88.000,
+         "power15_input_lowest": 0.000
+      },
+      "APSS 5 ":{
+         "power16_input": 54.000,
+         "power16_input_highest": 74.000,
+         "power16_input_lowest": 0.000
+      },
+      "APSS 6 ":{
+         "power17_input": 23.000,
+         "power17_input_highest": 65.000,
+         "power17_input_lowest": 0.000
+      },
+      "APSS 7 ":{
+         "power18_input": 23.000,
+         "power18_input_highest": 56.000,
+         "power18_input_lowest": 0.000
+      },
+      "APSS 8 ":{
+         "power19_input": 39.000,
+         "power19_input_highest": 357.000,
+         "power19_input_lowest": 0.000
+      },
+      "APSS 9 ":{
+         "power20_input": 38.000,
+         "power20_input_highest": 381.000,
+         "power20_input_lowest": 0.000
+      },
+      "APSS 10 ":{
+         "power21_input": 37.000,
+         "power21_input_highest": 397.000,
+         "power21_input_lowest": 0.000
+      },
+      "APSS 11 ":{
+         "power22_input": 38.000,
+         "power22_input_highest": 389.000,
+         "power22_input_lowest": 0.000
+      },
+      "APSS 12 ":{
+         "power23_input": 38.000,
+         "power23_input_highest": 375.000,
+         "power23_input_lowest": 0.000
+      },
+      "APSS 13 ":{
+         "power24_input": 38.000,
+         "power24_input_highest": 384.000,
+         "power24_input_lowest": 0.000
+      },
+      "APSS 14 ":{
+         "power25_input": 13.000,
+         "power25_input_highest": 201.000,
+         "power25_input_lowest": 0.000
+      },
+      "APSS 15 ":{
+         "power26_input": 47.000,
+         "power26_input_highest": 78.000,
+         "power26_input_lowest": 0.000
+      },
+      "Chip 0 GPU":{
+         "energy1_input": 177623276.770
+      },
+      "Chip 8 GPU":{
+         "energy2_input": 176448060.539
+      },
+      "Chip 0 Memory":{
+         "energy3_input": 34910968.655
+      },
+      "Chip 8 Memory":{
+         "energy4_input": 34134242.990
+      },
+      "Chip 0 ":{
+         "energy5_input": 120803156.123
+      },
+      "Chip 0 Vdd":{
+         "energy6_input": 14435043.329
+      },
+      "Chip 0 Vdn":{
+         "energy7_input": 17708384.634
+      },
+      "Chip 8 ":{
+         "energy8_input": 115972369.804
+      },
+      "Chip 8 Vdd":{
+         "energy9_input": 13909708.738
+      },
+      "Chip 8 Vdn":{
+         "energy10_input": 17017569.824
+      },
+      "System":{
+         "energy11_input": 654421933.788
+      },
+      "APSS 0 ":{
+         "energy12_input": 654421933.788
+      },
+      "APSS 2 ":{
+         "energy13_input": 34710923.219
+      },
+      "APSS 3 ":{
+         "energy14_input": 33569174.975
+      },
+      "APSS 4 ":{
+         "energy15_input": 86015905.155
+      },
+      "APSS 5 ":{
+         "energy16_input": 82718755.388
+      },
+      "APSS 6 ":{
+         "energy17_input": 34910969.558
+      },
+      "APSS 7 ":{
+         "energy18_input": 34134243.167
+      },
+      "APSS 8 ":{
+         "energy19_input": 60970871.422
+      },
+      "APSS 9 ":{
+         "energy20_input": 59166366.672
+      },
+      "APSS 10 ":{
+         "energy21_input": 57935319.127
+      },
+      "APSS 11 ":{
+         "energy22_input": 58391348.452
+      },
+      "APSS 12 ":{
+         "energy23_input": 59302196.194
+      },
+      "APSS 13 ":{
+         "energy24_input": 59088744.829
+      },
+      "APSS 14 ":{
+         "energy25_input": 22902347.556
+      },
+      "APSS 15 ":{
+         "energy26_input": 72113321.068
+      },
+      "Chip 0 Vdd":{
+         "curr1_input": 23.500,
+         "curr1_lowest": 9.500,
+         "curr1_highest": 220.750
+      },
+      "Chip 0 Vdn":{
+         "curr2_input": 25.750,
+         "curr2_lowest": 22.250,
+         "curr2_highest": 40.630
+      },
+      "Chip 8 Vdd":{
+         "curr3_input": 22.130,
+         "curr3_lowest": 7.750,
+         "curr3_highest": 233.750
+      },
+      "Chip 8 Vdn":{
+         "curr4_input": 25.380,
+         "curr4_lowest": 21.500,
+         "curr4_highest": 36.750
+      }
+   }
+}

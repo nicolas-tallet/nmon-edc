@@ -1,7 +1,7 @@
-#!/bin/bash
+#!//usr/bin/env bash
 
 #===============================================================================
-# nmon Chart
+# NEDC: DCGMI Stats
 #===============================================================================
-readonly NMONCHART_PREFIX="/data_local/sw/nmonchart"
-readonly NMONCHART_EXECBIN="${NMON_PREFIX}/bin/nmonchart-extended"
+export NMON_ONE_IN=5
+export TIMESTAMP=0
